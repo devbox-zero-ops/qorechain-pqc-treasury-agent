@@ -1,0 +1,186 @@
+{
+  "network": "qorechain-diana",
+  "rest": "https://api-testnet.qore.host",
+  "rpc": "https://rpc-testnet.qore.host",
+  "evmRpc": "https://evm-testnet.qore.host",
+  "executedAt": "2026-11-27T00:17:57.466Z",
+  "vaultAccount": {
+    "qorAddress": "qor1j9gj92ffkmud24p4uzszexhqnuy0dq9sf5ymwp",
+    "ethAddress": "0x915122A929b6f8d55435E0a02C9aE09F08F680b0",
+    "svmAddress": "AnFscrt3dANf1d6FUrJuzeAH14HymRQHUAVsE3KXXrFZ"
+  },
+  "agentAuthenticator": {
+    "scheme": "ed25519",
+    "pubkeyHex": "951c4a25d88d07d1f6789f20106e0b81f8b9dc529d258b252b9e99bb56734d3f",
+    "label": "qoreagent-treasury-bot-v1",
+    "keyReused": true
+  },
+  "steps": {
+    "possessionProof": {
+      "verifiedLocally": true,
+      "pubkeyHex": "951c4a25d88d07d1f6789f20106e0b81f8b9dc529d258b252b9e99bb56734d3f",
+      "proofLengthBytes": 64
+    },
+    "linkAuthenticator": {
+      "status": "already_registered",
+      "txHash": "182EBAC89CC20804931EC1B786FD00264BAE36FB55987305C921C80CBA39B1EA",
+      "height": 10818158,
+      "existingAuthenticatorsCount": 1
+    },
+    "openEvmWindow": {
+      "status": "already_live",
+      "txHash": "7578AB067A0224531D9C66A372309B387BEB8CF6BE7B5B120044F166F1350B05",
+      "height": 10818171,
+      "liveWindow": {
+        "found": true,
+        "live": true,
+        "openedHeight": "10818171",
+        "expiryHeight": "10818771",
+        "maxTxs": "5",
+        "usedTxs": "0",
+        "maxValue": "500000",
+        "usedValue": "0",
+        "remainingBlocks": "559",
+        "remainingTxs": "5",
+        "remainingValue": "500000",
+        "nativeOnly": false,
+        "allowedTargets": [
+          "0x915122a929b6f8d55435e0a02c9ae09f08f680b0"
+        ]
+      }
+    },
+    "agentExecuteWithinCap": {
+      "txHash": "3A2E4A7FC63B4D27FE1CE7F1C0994A50F5CD81DFAAE737023F33C1547D14AD59",
+      "height": 10818215,
+      "code": 0,
+      "nonceUsed": "2",
+      "to": "qor1g3tlnnpuda57dv99rd2drsagw799wcfrsdx55g",
+      "amount": "10uqor",
+      "authenticatorsQueried": 1,
+      "executionResults": [
+        {
+          "index": 0,
+          "lane": "cosmos",
+          "success": true,
+          "ret": "0x",
+          "gasUsed": "0",
+          "vmError": "",
+          "reason": ""
+        }
+      ]
+    },
+    "spendingCapEnforcement": {
+      "mode": "included_in_block",
+      "txHash": "DF6863E4A5F3E4F34402FB918B3C632FC42618104BF70F0DAEB7F91AD78131D3",
+      "height": 10818218,
+      "code": 0,
+      "nonceUsed": "3",
+      "attemptedAmount": "200000uqor",
+      "perTxLimit": "100000uqor",
+      "executionResults": [
+        {
+          "index": 0,
+          "lane": "cosmos",
+          "success": false,
+          "ret": "0x",
+          "gasUsed": "0",
+          "vmError": "",
+          "reason": "per-tx limit 100000uqor exceeded (attempted 200000): spending limit exceeded",
+          "account": "qor1j9gj92ffkmud24p4uzszexhqnuy0dq9sf5ymwp",
+          "nonce": "3"
+        }
+      ]
+    },
+    "liveStateAndEvmProbes": {
+      "cosmosRest": {
+        "spendingRules": {
+          "rules": [
+            {
+              "id": "treasury-cap-v1",
+              "dailyLimit": "500000",
+              "perTxLimit": "100000",
+              "allowedDenoms": [
+                "uqor"
+              ],
+              "enabled": true,
+              "allowedEvmCalls": [],
+              "denomLimits": [
+                {
+                  "denom": "uqor",
+                  "perTxLimit": "100000",
+                  "dailyLimit": "500000"
+                }
+              ]
+            }
+          ],
+          "authenticatorRules": []
+        },
+        "authenticators": [
+          {
+            "scheme": "ed25519",
+            "pubkeyHex": "951c4a25d88d07d1f6789f20106e0b81f8b9dc529d258b252b9e99bb56734d3f",
+            "permissions": [
+              "send",
+              "evm"
+            ],
+            "expiryUnix": "1798330596",
+            "label": "qoreagent-treasury-bot-v1",
+            "createdAtUnix": "1795738598",
+            "revoked": false,
+            "hasSpendRule": false
+          }
+        ],
+        "evmWindow": {
+          "found": true,
+          "live": true,
+          "openedHeight": "10818171",
+          "expiryHeight": "10818771",
+          "maxTxs": "5",
+          "usedTxs": "0",
+          "maxValue": "500000",
+          "usedValue": "0",
+          "remainingBlocks": "551",
+          "remainingTxs": "5",
+          "remainingValue": "500000",
+          "nativeOnly": false,
+          "allowedTargets": [
+            "0x915122a929b6f8d55435e0a02c9ae09f08f680b0"
+          ]
+        }
+      },
+      "evmRpc": {
+        "blockNumberHex": "0xa512ac",
+        "blockNumber": 10818220,
+        "balanceWeiHex": "0x56588935f213dc000",
+        "balanceWei": "99549980000000000000",
+        "qorGetPQCKeyStatus": {
+          "found": true,
+          "account": {
+            "address": "qor1j9gj92ffkmud24p4uzszexhqnuy0dq9sf5ymwp",
+            "public_key": "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",
+            "algorithm_id": 1,
+            "algorithm_name": "dilithium5",
+            "ecdsa_pubkey": "A9Q/3AcUKOa8ZtGkFGH9fzE5/Japkn9Up1SSEUbu3aX5",
+            "key_type": "hybrid",
+            "created_at_height": 10814705,
+            "classical_key_source": "auth_account",
+            "possession_proven": true
+          }
+        }
+      },
+      "aiPrecompiles": {
+        "AI_RISK_SCORE_ADDRESS": "0x0000000000000000000000000000000000000B01",
+        "AI_ANOMALY_CHECK_ADDRESS": "0x0000000000000000000000000000000000000B02",
+        "aiRiskScoreEmptyCalldata": {
+          "error": "Cannot decode zero data (\"0x\") with ABI parameters.\n\nVersion: viem@2.58.7"
+        },
+        "aiAnomalyCheck10uqor": {
+          "error": "Cannot decode zero data (\"0x\") with ABI parameters.\n\nVersion: viem@2.58.7"
+        },
+        "aiAnomalyCheck200000uqor": {
+          "error": "Cannot decode zero data (\"0x\") with ABI parameters.\n\nVersion: viem@2.58.7"
+        }
+      }
+    }
+  }
+}
